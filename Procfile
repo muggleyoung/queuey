@@ -1,1 +1,1 @@
-web: python manage.py runserver 8080
+web: gunicorn mysite.wsgi --log-file -
