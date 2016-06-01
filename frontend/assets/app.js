@@ -38284,7 +38284,10 @@ module.exports = React.createClass({
 		return React.createElement(
 			'li',
 			{ key: userInList.uuid, className: userInList.uuid === userHash ? 'user' : '' },
-			userInList.name
+			userInList.name,
+			' [',
+			userInList.uuid,
+			']'
 		);
 	},
 	render() {

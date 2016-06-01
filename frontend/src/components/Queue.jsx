@@ -10,7 +10,7 @@ module.exports = React.createClass({
 	},
 	renderUserInList(userInList, userHash){
 		return (
-			<li key={userInList.uuid} className={userInList.uuid === userHash ? 'user' : ''}>{userInList.name}</li>
+			<li key={userInList.uuid} className={userInList.uuid === userHash ? 'user' : ''}>{userInList.name} [{userInList.uuid}]</li>
 		)
 	},
 	render(){

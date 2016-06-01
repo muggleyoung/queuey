@@ -1,3 +1,5 @@
+import uuid
+
 from queuey.models import Person
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -10,3 +12,9 @@ def queue(request):
 
 def index(request):
     return render(request, 'index.html')
+
+
+def join_queue(request):
+    person = Person(name=request.POST['name'], uuid=uuid.uuid1())
+    person.save()
+    return JsonResponse({'status': 'ok'})
