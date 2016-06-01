@@ -1,7 +1,8 @@
 const ReactDom = require('react-dom')
-const MainComponent = require('./components/Main.jsx')
+const React = require('react')
+const Queuey = require('./components/Queuey.jsx')
 
 ReactDom.render(
-	<MainComponent></MainComponent>,
+	<Queuey></Queuey>,
 	document.getElementById('main-container')
 )

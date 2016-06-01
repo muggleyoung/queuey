@@ -1,5 +1,5 @@
 .idea/*
 *.pyc
-frontend/node_modules
+node_modules
 assets/app.js
 assets/style.css
