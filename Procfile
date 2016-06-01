@@ -1,1 +1,1 @@
-web: gunicorn queuey.wsgi --log-file -
+web: gunicorn mysite/queuey.wsgi --log-file -
