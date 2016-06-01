@@ -3,3 +3,5 @@
 node_modules
 frontend/assets/app.js
 frontend/assets/style.css
+venv/*
+db.sqlite3

@@ -1,12 +1,9 @@
-from django.shortcuts import render
-
-# Create your views here.
-from queuey.models import Queue
-from django.shortcuts import render
+from queuey.models import Person
+from django.http import JsonResponse
 
 def index(request):
-    return render(request, 'index.html')
-
-def get_queue(request):
-    queue_list = Queue.objects.order_by('join_time')
-    return render(request, 'index.html', queue_list)
+    a = Person(name="mei", uuid="21234567890")
+    b = Person(name="yang", uuid="11234567890")
+    list = Person.objects.all()
+    queue = [person.to_json() for person in list]
+    return JsonResponse({'queue': queue})

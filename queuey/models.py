@@ -2,8 +2,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
-class Queue(models.Model):
-    queue_number = models.IntegerField(default = 0)
-    join_time = models.DateTimeField('join time')
+class Person(models.Model):
+    name = models.CharField(max_length=90)
+    uuid = models.CharField(max_length=20)
 
+    def to_json(self):
+        return {'name': self.name, 'uuid': self.uuid}
