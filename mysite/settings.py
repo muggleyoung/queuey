@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'queuey.apps.QueueyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
